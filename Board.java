@@ -1,4 +1,4 @@
-package hw3;
+
 
 public class Board {
 	private char[][] connectBoard;
