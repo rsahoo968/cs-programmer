@@ -7,17 +7,17 @@ public class Board {
     private char secondPlayer;
     
 	// TODO
-	// Add whatever private fields you need here.
-	// Remember, only variables of type int, char, boolean, and 1D and 2D arrays
-	// of these types are allowed.
-	//
-	// As always, you may also add private helper methods to the class.  That will
-	// likely be very useful on this assignment.
+// Add any necessary private fields here.
+// Only the following types are allowed: int, char, boolean, and 1D or 2D arrays
+// of these types.
+// 
+// As always, you may also include private helper methods in the class.
+// These will likely be very useful for this assignment.
 
-	/**
-	 * Constructs a new empty connect 4 game board with player X being the first player
-	 * and player 'O' being the second player.
-	 */
+/**
+ * Initializes a new empty Connect 4 game board with player 'X' as the first player
+ * and player 'O' as the second player.
+ */
 	public Board() {
 		char newEmpty = '0';
 		connectBoard = new char[6][7];
@@ -31,10 +31,10 @@ public class Board {
     }
 
 	/**
-	 * Gets the current player (either 'X' or 'O')
-	 * 
-	 * @return the current player
-	 */
+ * Returns the current player ('X' or 'O').
+ *
+ * @return the current player
+ */
 	public char currentPlayer() {
 		int spacesCount = 0;
         int spacesCount1 = 0;
@@ -57,15 +57,15 @@ public class Board {
 	
 
 	/**
-	 * The current player makes a move in a given column if it is a valid move.
-	 * Throws an exception if the game is already over.
-	 * 
-	 * @param column the column in which to make a move.  For the move to be valid,
-	 * the column value must an {@code int} between 1 and 7 inclusive, and
-	 * there must have been fewer than 6 moves already made in the given column.
-	 * @return {@code true} if the move is valid and false if it is not valid.
-	 * @throws RuntimeException if the game is already over.
-	 */
+ * Allows the current player to make a move in the specified column if the move is valid.
+ * Throws an exception if the game has already ended.
+ * 
+ * @param column the column in which to place the move. The column value must be an 
+ * {@code int} between 1 and 7 inclusive, and the column must have fewer than 6 moves 
+ * already made for the move to be valid.
+ * @return {@code true} if the move is valid, {@code false} if it is not.
+ * @throws RuntimeException if the game has already ended.
+ */
 	public boolean play(int column) {
 		if (gameStatus() == 'U' && spacesCount == 6*7)
             throw new RuntimeException("Game is already over.");
@@ -90,11 +90,11 @@ public class Board {
 	
 
 	/**
-	 * Determine the status of the game.
-	 * 
-	 * @return {@code 'X'} or {@code 'O'} if either player has won, {@code 'D'} if
-	 * the game is a draw, and {@code 'U'} if the game is still undecided.
-	 */
+ * Determines the current status of the game.
+ * 
+ * @return {@code 'X'} or {@code 'O'} if a player has won, {@code 'D'} if the 
+ * game is a draw, or {@code 'U'} if the game is still ongoing and undecided.
+ */
 	public char gameStatus() {
 		char victory = 'U';
 	    int checkRows = connectBoard.length;
@@ -149,11 +149,11 @@ public class Board {
 	
 
 	/**
-	 * Construct a string that depicts the sate of the game.
-	 * (See the writeup for what that string should look like.)
-	 * 
-	 * @return a string depicting the game board
-	 */
+ * Constructs a string representation of the current state of the game.
+ * (Refer to the assignment writeup for the required format.)
+ * 
+ * @return a string representing the game board
+ */
 	public String toString() {
 		String output = "";
 	    for (int h = 0; h < connectBoard.length; h++) {
