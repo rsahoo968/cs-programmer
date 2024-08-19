@@ -1,2 +1,2 @@
 # cs-programmer
-Passionate Computer Science Enthusiast with a strong foundation in coding and game development, honed through hands-on experience tutoring kids at Code Ninjas. Adept at simplifying complex programming concepts and fostering a collaborative learning environment. Proven ability to work effectively in team settings, leveraging creativity and technical skills to develop engaging educational content and interactive games.
+Passionate Computer Science Student at DePaul University with hands-on experience tutoring kids in coding at Code Ninjas. Skilled in breaking down complex programming concepts and working well in team settings. Strong background in game development, with a passion for creating interactive and engaging learning experiences.
